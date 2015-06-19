@@ -1,8 +1,8 @@
-# unab-first-rest-sample
+# unab-secured-api-googleplus-jwt
 
-UNAB first REST sample
+UNAB SECURED API con Google Plus y JWT
 
-Este proyecto es un ejemplo simple de como poder crear un proyecto basado en REST mediante el uso de NODEJS y EXPRESSJS. Construido usando KRAKENJS
+Este proyecto es un ejemplo de como poder crear un proyecto basado en REST mediante el uso de NODEJS y EXPRESSJS. Construido usando KRAKENJS
 
 *PREREQUISITOS*:
 
@@ -20,12 +20,4 @@ Deberia aparecer la version de nodejs
 - Una vez creado el proyecto, ejecutar: 
 $npm start 
 La aplicación deberia iniciar
-
-*Posibles problemas con Windows 8*:
-
-Some of Mean.io dependencies uses node-gyp with supported Python version 2.7.x. So if you see an error related to node-gyp rebuild follow next steps:
-install Python 2.7.x
-install Microsoft Visual Studio C++ 2012 Express
-Run NPM update
-$ npm update -g
 
