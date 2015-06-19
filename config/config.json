@@ -1,0 +1,41 @@
+{
+    "middleware": {
+
+        "static": {
+            "module": {
+                "arguments": [ "path:./.build" ]
+            }
+        }
+
+        ,"router": {
+            "module": {
+                "arguments": [{ "directory": "path:./controllers" }]
+            }
+        }
+
+
+        ,"expressView": {
+            "priority": 100,
+            "enabled": true,
+            "module": {
+                "name": "engine-munger/lib/expressView"
+            }
+        },
+
+        "appsec": {
+          "enabled": true,
+          "priority": 100,
+          "module": {
+            "name": "lusca",
+            "arguments": [
+              {
+                "csrf": false,
+                "p3p": false,
+                "xframe": "SAME-ORIGIN",
+                "csp": false
+              }
+            ]
+          }
+        }
+    }
+}
