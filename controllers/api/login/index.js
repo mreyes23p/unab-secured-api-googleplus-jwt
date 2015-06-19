@@ -8,7 +8,7 @@ module.exports = function (router) {
 
         //If access token was not sent in the query string ej: api/login?who=google&access_token=wrwerwqer
         //Then return a 401
-        if(!req.query || !req.query.who || !req.query.accesstoken){
+        if(!req.query || !req.query.thirdparty || !req.query.userid || !req.query.accesstoken){
             return res.status(401).end();
         }
 
@@ -19,7 +19,7 @@ module.exports = function (router) {
             }
             
             //Get the JWToken
-            usersLib.getToken('', function(error, token){
+            usersLib.getToken(req.query.userid, function(error, token){
                 return res.status(200).json({'token': token}).end();  
             });             
         });
